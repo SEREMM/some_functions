@@ -9,8 +9,8 @@ def read_gsheet_shared(sheet_id, sheet_name):
   Returns:
     A dataframe of the csv in the gsheet.
   '''
-  gsheetid = '1y1kdVoBif48Kq8s9aUeBEQ4Omzvo3y1aqi495LOZVmo'
-  sheet_name = 'abril'
-  gsheet_url = 'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tqx=out:csv&sheet={}'.format(gsheetid,sheet_name)
+  id = sheet_id
+  name = sheet_name
+  gsheet_url = 'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tqx=out:csv&sheet={}'.format(id, name)
   df = pd.read_csv(gsheet_url)
   return df
